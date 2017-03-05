@@ -29,7 +29,7 @@ nav: zh-CN
     <img src="https://img.shields.io/github/issues/airyland/vux.svg?style=flat-square" alt="">
   </a>
   <a href="https://github.com/airyland/vux/issues">
-    <img src="http://isitmaintained.com/badge/resolution/airyland/vux.svg?style=flat-square" alt="">
+    <img src="https://isitmaintained.com/badge/resolution/airyland/vux.svg?style=flat-square" alt="">
   </a>
   <a href="https://github.com/airyland/vux/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/airyland/vux.svg?style=flat-square" alt="">
@@ -82,10 +82,11 @@ Vux（读音 [v'ju:z]，同`views`）是基于`WeUI`和`Vue`(2.x)开发的移动
 
 > 如果你的产品在使用`VUX`, 欢迎邮箱发送`Logo+链接`给我。
 
-<img src="https://static.vux.li/showcase/ssy_logo.png" width="200">
-<img src="https://static.vux.li/showcase/jkda51.png" width="200">
-<img src="https://static.vux.li/showcase/voez.png" width="200">
-<img src="https://static.vux.li/showcase/logo_xmb.png" width="200">
+<img src="https://static.vux.li/showcase/ssy.png" width="150">
+<img src="https://static.vux.li/showcase/jkda51.png?v2" width="150">
+<img src="https://static.vux.li/showcase/voez.png?v2" width="150">
+<img src="https://static.vux.li/showcase/xmb.png?v2" width="150">
+<img src="https://static.vux.li/showcase/jkny.png" width="150">
 
 ## 安装使用(webpack)
 
@@ -351,7 +352,9 @@ console.log(Vue.wechat) // 可以直接访问 wx 对象。
 ```
 那么之后任何组件中都可以通过 `this.$wechat` 访问到 `wx` 对象。
 
-考虑到你需要在引入插件后调用`wx.config`方法进行配置，你可以通过 `WechatPlugin.$wechat` 在组件外部访问`wx`对象。 
+考虑到你需要在引入插件后调用`wx.config`方法进行配置，你可以通过 `Vue.wechat` 在组件外部访问`wx`对象。 
+
+`jssdk`需要请求签名配置，你可以直接使用下面的`ajaxPlugin`。
 
 ## 发送 ajax 请求
 
@@ -850,6 +853,21 @@ npm run docs // 使用 docute 预览文档
 ### 如何贡献
 
 遵从 Github 上的 contribution template.
+
+如果修改了组件代码，需要在组件目录的`metas.yml`加上changes，直接使用`next`作为版本号(如果已经存在该版本号，则直接添加变更条目即可)。
+
+中括号内为变更类型，可选值 `fix` `enhance` `feature` `change`
+
+比如：
+
+``` yml
+changes:
+  next:
+    en:
+      - '[fix] fix *** bug #issueId'
+    zh-CN:
+      - '[fix] 修复 *** bug #issueId'
+```
 
 ### 如何更新文档
 
