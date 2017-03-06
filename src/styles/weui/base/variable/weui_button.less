@@ -21,16 +21,16 @@
 
 @weuiBtnPrimaryBg:@button-primary-bg-color;
 @weuiBtnPrimaryActiveBg:@button-primary-active-bg-color;
-@weuiBtnPrimaryDisabledBg:#9ED99D;
+@weuiBtnPrimaryDisabledBg:@primary-color;
 
 @weuiBtnWarnBg:@button-warn-bg-color;
 @weuiBtnWarnActiveBg:@button-warn-active-color;
 @weuiBtnwarnDisabledBg:#EC8B89;
 
-@weuiBtnPlainPrimaryColor:rgba(26,173,25,1);
-@weuiBtnPlainPrimaryBorderColor:rgba(26,173,25,1);
-@weuiBtnPlainPrimaryActiveColor:rgba(26,173,25,.6);
-@weuiBtnPlainPrimaryActiveBorderColor:rgba(26,173,25,.6);
+@weuiBtnPlainPrimaryColor:@primary-color;
+@weuiBtnPlainPrimaryBorderColor:@primary-color;
+@weuiBtnPlainPrimaryActiveColor:fadein(@primary-color, 60%);
+@weuiBtnPlainPrimaryActiveBorderColor:fadeout(@primary-color, .6);
 
 @weuiBtnPlainDefaultColor:rgba(53,53,53,1);
 @weuiBtnPlainDefaultBorderColor:rgba(53,53,53,1);

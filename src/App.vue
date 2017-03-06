@@ -210,7 +210,7 @@ html, body {
 .demo-icon {
   font-family: 'vux-demo';
   font-size:20px;
-  color: #04BE02;
+  color: #1ab49a;
 }
 
 .demo-icon:before {
